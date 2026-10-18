@@ -50,14 +50,25 @@
   // ---------- sound: one line at a time, like in the game (Web Audio – iPadOS allows it after the first tap)
   // iPhone (2026-10-18, the user: no sound at all): Safari's Web Audio is of the type « ambient » – silent while the phone is on
   // silent mode. « playback » (iOS 17+) makes it sound like a video does.
-  try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) { /* older iOS: switch silent mode off */ }
+  function sessionLecture() {
+    try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) { /* older iOS: switch silent mode off */ }
+  }
+  sessionLecture();
   const Son = (() => {
-    let ctx = null, source = null, jeton = 0;
-    const tampons = new Map();
+    let ctx = null, source = null, jeton = 0, tampons = new Map();
+    // iPhone (2026-10-18, the user: after 1–2 minutes in the background the sound was gone until the website data was deleted):
+    // iOS leaves an AudioContext « interrupted » or silent after the background. So it is closed when the app is hidden (or when
+    // it stays silent) and a new one is made at the next tap; the sounds are decoded again (from the offline cache).
+    function fermer() {
+      if (ctx) { try { ctx.close(); } catch (e) { /* already closed */ } }
+      ctx = null;
+      tampons = new Map();
+    }
     function contexte() {
       if (!ctx) {
         const AC = window.AudioContext || window.webkitAudioContext;
         if (!AC) return null;
+        sessionLecture();
         ctx = new AC();
         const s = ctx.createBufferSource();                 // a silent sample unlocks the sound on older iPads
         s.buffer = ctx.createBuffer(1, 1, 22050); s.connect(ctx.destination); s.start(0);
@@ -65,16 +76,19 @@
       if (ctx.state !== 'running') ctx.resume().catch(() => {});
       return ctx;
     }
-    function charger(url) {
-      let p = tampons.get(url);
+    function charger(url, c) {
+      const t = tampons;
+      let p = t.get(url);
       if (!p) {
         p = fetch(url).then(r => { if (!r.ok) throw new Error(url); return r.arrayBuffer(); })
-          .then(b => new Promise((ok, nok) => ctx.decodeAudioData(b, ok, nok)));
-        tampons.set(url, p);
-        p.catch(() => tampons.delete(url));
+          .then(b => new Promise((ok, nok) => c.decodeAudioData(b, ok, nok)));
+        t.set(url, p);
+        p.catch(() => t.delete(url));
       }
       return p;
     }
+    document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'hidden') { stop(); fermer(); } });
+    window.addEventListener('pagehide', () => { stop(); fermer(); });
     function stop() {
       jeton++;
       if (source) { try { source.stop(); } catch (e) { /* already ended */ } source = null; }
@@ -89,12 +103,16 @@
         if (!x) continue;
         if (typeof x === 'number') { await attendre(x); continue; }
         let buf;
-        try { buf = await charger(x); } catch (e) { continue; }
-        if (moi !== jeton) return;
+        try { buf = await charger(x, c); } catch (e) { continue; }
+        if (moi !== jeton || c !== ctx) return;
         await new Promise(fini => {
           const s = c.createBufferSource();
           s.buffer = buf; s.connect(c.destination);
           s.onended = fini; source = s; s.start(0);
+          const t0 = c.currentTime;
+          setTimeout(() => {                              // its clock stands still: a dead context – a new one at the next tap
+            if (c === ctx && c.currentTime === t0 && document.visibilityState === 'visible') fermer();
+          }, 800);
           setTimeout(fini, buf.duration * 1000 + 400);    // in case the iPad holds the sound back
         });
       }
