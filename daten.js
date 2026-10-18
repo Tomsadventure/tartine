@@ -1,5 +1,5 @@
 window.DATEN = {
- "version": "2026-10-18 14:16",
+ "version": "2026-10-18 14:55",
  "unites": [
   {
    "id": "u1",
@@ -304,7 +304,8 @@ window.DATEN = {
    "sde": "Wie geht's?",
    "h": "",
    "aw": "U1_09_WortFR.mp3",
-   "as": "U1_09_SatzFR.mp3"
+   "as": "U1_09_SatzFR.mp3",
+   "img": "U1_09.webp"
   },
   "U1_10": {
    "id": "U1_10",
@@ -329,7 +330,8 @@ window.DATEN = {
    "sde": "Wann schläfst du?",
    "h": "",
    "aw": "U1_11_WortFR.mp3",
-   "as": "U1_11_SatzFR.mp3"
+   "as": "U1_11_SatzFR.mp3",
+   "img": "U1_11.webp"
   },
   "U1_12": {
    "id": "U1_12",
@@ -341,7 +343,8 @@ window.DATEN = {
    "sde": "Was machst du?",
    "h": "im Satz oft am Ende (Umgangssprache)",
    "aw": "U1_12_WortFR.mp3",
-   "as": "U1_12_SatzFR.mp3"
+   "as": "U1_12_SatzFR.mp3",
+   "img": "U1_12.webp"
   },
   "U1_13": {
    "id": "U1_13",
@@ -353,7 +356,8 @@ window.DATEN = {
    "sde": "Was machst du am Abend? Ich gehe ans Meer!",
    "h": "",
    "aw": "U1_13_WortFR.mp3",
-   "as": "U1_13_SatzFR.mp3"
+   "as": "U1_13_SatzFR.mp3",
+   "img": "U1_13.webp"
   },
   "U1_14": {
    "id": "U1_14",
@@ -651,7 +655,8 @@ window.DATEN = {
    "sde": "Die Katze schläft überall.",
    "h": "neu im Satz: le chat = die Katze",
    "aw": "U1_36_WortFR.mp3",
-   "as": "U1_36_SatzFR.mp3"
+   "as": "U1_36_SatzFR.mp3",
+   "img": "U1_36.webp"
   },
   "U1_37": {
    "id": "U1_37",
@@ -741,7 +746,8 @@ window.DATEN = {
    "sde": "Warum machst du deine Hausaufgaben? Weil es lustig ist!",
    "h": "",
    "aw": "U1_43_WortFR.mp3",
-   "as": "U1_43_SatzFR.mp3"
+   "as": "U1_43_SatzFR.mp3",
+   "img": "U1_43.webp"
   },
   "U1_44": {
    "id": "U1_44",
@@ -1507,7 +1513,8 @@ window.DATEN = {
    "sde": "Wie viele Zimmer hat dein Haus? Sechs Zimmer!",
    "h": "la pièce = das Zimmer, der Raum; neu im Satz: six = sechs",
    "aw": "U2_46_WortFR.mp3",
-   "as": "U2_46_SatzFR.mp3"
+   "as": "U2_46_SatzFR.mp3",
+   "img": "U2_46.webp"
   },
   "U2_47": {
    "id": "U2_47",
@@ -1519,7 +1526,8 @@ window.DATEN = {
    "sde": "Wer wohnt mit dir? Niemand, ich wohne allein!",
    "h": "neu im Satz: personne = niemand; seul = allein (Unité 1)",
    "aw": "U2_47_WortFR.mp3",
-   "as": "U2_47_SatzFR.mp3"
+   "as": "U2_47_SatzFR.mp3",
+   "img": "U2_47.webp"
   },
   "U2_48": {
    "id": "U2_48",
@@ -1531,7 +1539,8 @@ window.DATEN = {
    "sde": "Wo ist dein Zimmer? Unten, im zweiten Stock!",
    "h": "",
    "aw": "U2_48_WortFR.mp3",
-   "as": "U2_48_SatzFR.mp3"
+   "as": "U2_48_SatzFR.mp3",
+   "img": "U2_48.webp"
   },
   "U2_49": {
    "id": "U2_49",

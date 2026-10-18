@@ -1,6 +1,6 @@
 /* Offline for « Les cartes de Tartine »: keeps every file of this version on the device (Docs/WebApp.md).
    bauen.py fills in the version and the file list – a new build is a new version, the old one is deleted. */
-const VERSION = 'tartine-846731cc19';
+const VERSION = 'tartine-8710d4095b';
 const FICHIERS = [
  "./",
  "app.js",
@@ -257,7 +257,11 @@ const FICHIERS = [
  "img/mots/U1_06.webp",
  "img/mots/U1_07.webp",
  "img/mots/U1_08.webp",
+ "img/mots/U1_09.webp",
  "img/mots/U1_10.webp",
+ "img/mots/U1_11.webp",
+ "img/mots/U1_12.webp",
+ "img/mots/U1_13.webp",
  "img/mots/U1_14.webp",
  "img/mots/U1_15.webp",
  "img/mots/U1_16.webp",
@@ -280,12 +284,14 @@ const FICHIERS = [
  "img/mots/U1_33.webp",
  "img/mots/U1_34.webp",
  "img/mots/U1_35.webp",
+ "img/mots/U1_36.webp",
  "img/mots/U1_37.webp",
  "img/mots/U1_38.webp",
  "img/mots/U1_39.webp",
  "img/mots/U1_40.webp",
  "img/mots/U1_41.webp",
  "img/mots/U1_42.webp",
+ "img/mots/U1_43.webp",
  "img/mots/U1_44.webp",
  "img/mots/U1_45.webp",
  "img/mots/U1_46.webp",
@@ -344,6 +350,9 @@ const FICHIERS = [
  "img/mots/U2_43.webp",
  "img/mots/U2_44.webp",
  "img/mots/U2_45.webp",
+ "img/mots/U2_46.webp",
+ "img/mots/U2_47.webp",
+ "img/mots/U2_48.webp",
  "img/mots/U2_49.webp",
  "img/mots/U2_50.webp",
  "img/mots/U2_51.webp",
@@ -353,7 +362,8 @@ const FICHIERS = [
  "img/titre.webp",
  "index.html",
  "manifest.webmanifest",
- "style.css"
+ "style.css",
+ "sw.js"
 ];
 
 self.addEventListener('install', e => {
