@@ -1,0 +1,237 @@
+/* « Les cartes de Tartine » – the look of the game: cream cards with a jam-red edge, dark ink-blue French, warm grey-brown
+   German, Tartine honey yellow, the quiz night blue (Decisions.md 2026-10-02). Font: Nunito (OFL). */
+@font-face { font-family: 'Nunito'; src: url('fonts/Nunito-Regular.ttf') format('truetype'); font-weight: 400; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('fonts/Nunito-Bold.ttf') format('truetype'); font-weight: 700; font-display: swap; }
+@font-face { font-family: 'Nunito'; src: url('fonts/Nunito-ExtraBold.ttf') format('truetype'); font-weight: 800; font-display: swap; }
+
+:root {
+  --fond: #FCEFD6;
+  --fond-2: #F6E0B8;
+  --creme: #FFF8EA;
+  --blanc: #FFFDF6;
+  --confiture: #B3152A;
+  --confiture-fonce: #7E0E1D;
+  --encre: #1E2B57;
+  --brun: #7A6450;
+  --miel: #F6C44E;
+  --miel-bord: #D9822B;
+  --brun-fonce: #4A2C12;
+  --nuit: #1B2448;
+  --bleu-clair: #A8D8FF;
+  --vert: #3E9F5A;
+  --vert-fonce: #2B7340;
+  --rouge: #D43C3C;
+  --rouge-fonce: #922626;
+  --ombre: 0 5px 0 rgba(126, 14, 29, .22), 0 12px 26px rgba(74, 44, 18, .14);
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: radial-gradient(120% 80% at 50% 0%, #FFF7E6 0%, var(--fond) 55%, var(--fond-2) 100%);
+  background-color: var(--fond);
+  color: var(--encre);
+  font-family: 'Nunito', system-ui, -apple-system, sans-serif;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-user-select: none;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+#app {
+  max-width: 1040px;
+  margin: 0 auto;
+  min-height: 100vh;
+  min-height: 100dvh;
+  padding: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+           max(24px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+button { font: inherit; color: inherit; cursor: pointer; touch-action: manipulation; border: 0; background: none; padding: 0; }
+button:focus-visible, .carte:focus-visible { outline: 4px solid var(--miel-bord); outline-offset: 3px; }
+img { -webkit-user-drag: none; }
+.chargement { margin: auto; font-size: 22px; font-weight: 700; color: var(--brun); }
+
+/* ---------- header */
+.entete { display: grid; grid-template-columns: 56px 1fr auto; align-items: center; gap: 14px; }
+.retour {
+  width: 56px; height: 56px; border-radius: 50%;
+  background: var(--creme); border: 3px solid var(--confiture); color: var(--confiture);
+  display: grid; place-items: center; box-shadow: 0 4px 0 rgba(126, 14, 29, .25);
+}
+.retour svg { width: 28px; height: 28px; margin-left: -2px; }
+.retour:active { transform: translateY(3px); box-shadow: none; }
+.entete-titre { min-width: 0; }
+.entete-titre h1 { margin: 0; font-size: clamp(22px, 3.2vw, 32px); font-weight: 800; color: var(--confiture); line-height: 1.15; }
+.entete-titre p { margin: 2px 0 0; color: var(--brun); font-weight: 700; }
+.compteur { font-weight: 800; color: var(--brun); font-size: 20px; min-width: 64px; text-align: right; }
+
+/* ---------- home */
+.accueil { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.titre-img { width: min(420px, 78vw); height: auto; filter: drop-shadow(0 6px 10px rgba(74, 44, 18, .18)); }
+.titre-app { margin: -8px 0 0; font-size: clamp(26px, 4vw, 38px); font-weight: 800; color: var(--encre); }
+.scene { display: flex; align-items: center; justify-content: center; gap: 10px; }
+.tartine img { width: clamp(92px, 13vw, 128px); height: auto; display: block; filter: drop-shadow(0 6px 8px rgba(74, 44, 18, .2)); }
+.tartine:active img { transform: scale(.96) rotate(-3deg); }
+.unites { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 18px; width: 100%; max-width: 780px; }
+.tuile-unite {
+  background: var(--creme); border: 4px solid var(--confiture); border-radius: 24px; padding: 18px 22px;
+  display: flex; flex-direction: column; gap: 4px; text-align: left; box-shadow: var(--ombre);
+}
+.tuile-unite:active { transform: translateY(3px); }
+.u-titre { font-size: 15px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--confiture); }
+.u-nom { font-size: clamp(24px, 3vw, 30px); font-weight: 800; line-height: 1.15; }
+.u-de { color: var(--brun); font-weight: 700; }
+.difficiles { width: 100%; max-width: 780px; text-align: left; }
+.lien { color: var(--brun); font-weight: 700; padding: 12px 18px; text-decoration: underline; text-underline-offset: 4px; }
+.astuce {
+  width: 100%; max-width: 780px; display: flex; align-items: center; gap: 12px; text-align: left;
+  background: var(--blanc); border: 2px dashed var(--miel-bord); border-radius: 16px; padding: 10px 14px;
+}
+.astuce p { margin: 0; flex: 1; color: var(--brun-fonce); font-weight: 600; }
+.astuce-x { width: 44px; height: 44px; flex: none; border-radius: 50%; font-size: 20px; color: var(--brun); }
+
+/* ---------- Tartine's speech bubble (honey yellow = Tartine speaks) */
+.bulle {
+  display: flex; align-items: center; gap: 12px; text-align: left;
+  background: var(--miel); border: 3px solid var(--miel-bord); border-radius: 28px; padding: 12px 20px;
+  color: var(--brun-fonce); box-shadow: 0 4px 0 rgba(217, 130, 43, .35);
+}
+.bulle-accueil { position: relative; }
+.bulle-accueil::before {
+  content: ''; position: absolute; left: -13px; top: 50%; width: 20px; height: 20px; margin-top: -10px;
+  background: var(--miel); border-left: 3px solid var(--miel-bord); border-bottom: 3px solid var(--miel-bord); transform: rotate(45deg);
+}
+.bulle-tete { width: 52px; height: 52px; flex: none; border-radius: 50%; background: var(--creme); border: 2px solid var(--miel-bord); }
+.bulle-fr { margin: 0; font-weight: 800; font-size: clamp(18px, 2.4vw, 24px); line-height: 1.2; }
+.bulle-de { margin: 2px 0 0; font-weight: 600; font-size: 15px; opacity: .8; }
+.bulle-quiz { background: rgba(246, 196, 78, .12); border-color: rgba(246, 196, 78, .45); box-shadow: none; color: var(--miel); }
+.bulle-quiz .bulle-de { color: #E9CF95; opacity: 1; }
+
+/* ---------- decks */
+.grille { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 18px; }
+.tuile {
+  background: var(--creme); border: 3px solid var(--confiture); border-radius: 22px; padding: 16px 18px;
+  display: flex; flex-direction: column; gap: 6px; box-shadow: var(--ombre);
+}
+.tuile-haut { display: flex; justify-content: space-between; align-items: flex-start; gap: 10px; }
+.tuile h2 { margin: 0; font-size: 24px; font-weight: 800; line-height: 1.15; }
+.tuile-de { margin: 2px 0 0; color: var(--brun); font-weight: 700; }
+.tuile-info { margin: 6px 0 0; font-size: 15px; color: var(--brun); }
+.tuile-boutons { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 10px; }
+.barre { height: 10px; border-radius: 99px; background: rgba(179, 21, 42, .12); overflow: hidden; margin-top: 6px; }
+.barre span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--vert), #6CC57F); }
+.etoiles { white-space: nowrap; }
+.etoiles span { font-size: 24px; line-height: 1; }
+.etoiles .on { color: #F5B301; text-shadow: 0 2px 0 #B07A00; }
+.etoiles .off { color: rgba(122, 100, 80, .22); }
+.etoiles.grand span { font-size: clamp(56px, 9vw, 84px); display: inline-block; animation: etoile .5s cubic-bezier(.3, 1.6, .5, 1) both; }
+.etoiles.grand span:nth-child(2) { animation-delay: .15s; }
+.etoiles.grand span:nth-child(3) { animation-delay: .3s; }
+.quiz .etoiles .off { color: rgba(255, 255, 255, .18); }
+@keyframes etoile { from { transform: scale(0) rotate(-30deg); opacity: 0; } to { transform: none; opacity: 1; } }
+
+/* ---------- buttons */
+.btn {
+  min-height: 62px; border-radius: 18px; padding: 8px 16px; font-weight: 800; font-size: 20px; line-height: 1.1;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px;
+}
+.btn small { font-size: 13px; font-weight: 700; opacity: .75; }
+.btn:active { transform: translateY(3px); box-shadow: none !important; }
+.btn-creme { background: var(--blanc); border: 3px solid var(--encre); color: var(--encre); box-shadow: 0 4px 0 var(--encre); }
+.btn-confiture { background: var(--confiture); border: 3px solid var(--confiture-fonce); color: var(--creme); box-shadow: 0 4px 0 var(--confiture-fonce); }
+.btn-encore { background: #FFE6BF; border: 3px solid var(--miel-bord); color: var(--brun-fonce); box-shadow: 0 4px 0 var(--miel-bord); }
+.btn-sais { background: var(--vert); border: 3px solid var(--vert-fonce); color: #fff; box-shadow: 0 4px 0 var(--vert-fonce); }
+.son {
+  width: 52px; height: 52px; flex: none; border-radius: 50%; display: grid; place-items: center;
+  background: var(--miel); border: 3px solid var(--miel-bord); color: var(--brun-fonce); box-shadow: 0 3px 0 var(--miel-bord);
+}
+.son svg { width: 26px; height: 26px; }
+.son:active { transform: translateY(2px); box-shadow: none; }
+
+/* ---------- the card (turns round when tapped) */
+.zone-carte { flex: 1; display: grid; place-items: center; }
+.carte { width: min(660px, 100%); perspective: 1600px; cursor: pointer; outline: none; }
+.carte.entre { animation: entre .35s ease-out; }
+@keyframes entre { from { opacity: 0; transform: translateX(48px) rotate(2deg); } to { opacity: 1; transform: none; } }
+.carte-int {
+  display: grid; transform-style: preserve-3d; -webkit-transform-style: preserve-3d;
+  transition: transform .55s cubic-bezier(.2, .7, .2, 1);
+}
+.carte.tournee .carte-int { transform: rotateY(180deg); }
+.face {
+  grid-area: 1 / 1; min-height: min(54vh, 440px); padding: clamp(18px, 3vw, 34px);
+  background: var(--creme); border: 5px solid var(--confiture); border-radius: 26px; box-shadow: var(--ombre);
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; text-align: center;
+  backface-visibility: hidden; -webkit-backface-visibility: hidden;
+}
+.verso { transform: rotateY(180deg); }
+.ligne-son { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.mot-fr { margin: 0; font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; color: var(--encre); line-height: 1.1; }
+.mot-fr.grand { font-size: clamp(36px, 6.4vw, 64px); }
+.mot-de { margin: 0; font-size: clamp(20px, 2.8vw, 28px); font-weight: 700; color: var(--brun); }
+.mot-de.grand { font-size: clamp(32px, 5.4vw, 54px); font-weight: 800; }
+.question-de { margin: 0; font-size: 18px; color: var(--brun); font-weight: 700; }
+.face hr { width: 60%; border: 0; border-top: 3px dotted rgba(179, 21, 42, .35); margin: 6px 0; }
+.satz-fr { margin: 0; font-size: clamp(18px, 2.5vw, 25px); font-weight: 700; color: var(--encre); line-height: 1.3; }
+.satz-de { margin: 0; font-size: clamp(15px, 2vw, 19px); color: var(--brun); line-height: 1.3; }
+.hinweis { margin: 6px 0 0; font-size: 14px; color: var(--brun-fonce); background: rgba(246, 196, 78, .28); padding: 5px 14px; border-radius: 99px; }
+.tippe { margin: 10px 0 0; font-size: 14px; font-weight: 700; color: var(--brun); opacity: .65; }
+.mot-img { width: 100%; max-height: 32vh; object-fit: cover; border-radius: 16px; }
+.actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; visibility: hidden; opacity: 0; transition: opacity .2s; }
+.actions.visible { visibility: visible; opacity: 1; }
+.actions .btn { min-width: 170px; }
+.fin { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
+.fin-tartine { width: 130px; height: auto; }
+.fin-texte { margin: 0; font-size: 20px; font-weight: 700; color: var(--brun); }
+
+/* ---------- the quiz (night blue, like WBP_Quiz) */
+.quiz {
+  flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 22px; text-align: center;
+  background: var(--nuit); color: #fff; border-radius: 28px; padding: clamp(18px, 3vw, 34px); box-shadow: 0 10px 30px rgba(27, 36, 72, .35);
+}
+.quiz-mot { margin: 0; font-size: clamp(36px, 6.2vw, 62px); font-weight: 800; color: var(--bleu-clair); line-height: 1.1; }
+.reponses { display: flex; flex-wrap: wrap; justify-content: center; gap: 20px; width: 100%; }
+.reponse {
+  flex: 1 1 200px; max-width: 300px; min-height: 78px; padding: 10px 16px; border-radius: 20px; border: 3px solid transparent;
+  background: var(--creme); color: var(--encre); font-weight: 800; font-size: clamp(19px, 2.4vw, 24px); line-height: 1.2;
+  box-shadow: 0 5px 0 #B9A98C;
+}
+.reponse:active { transform: translateY(3px); box-shadow: 0 2px 0 #B9A98C; }
+@media (hover: hover) { .reponse:not(:disabled):hover { background: #FFE9A8; } }
+.reponse.juste { background: var(--vert); color: #fff; box-shadow: 0 5px 0 var(--vert-fonce); }
+.reponse.faux { background: var(--rouge); color: #fff; box-shadow: 0 5px 0 var(--rouge-fonce); }
+.reponse:disabled { cursor: default; }
+.reponse:disabled:not(.juste):not(.faux) { opacity: .5; }
+.points { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; }
+.points span { width: 12px; height: 12px; border-radius: 50%; background: rgba(255, 255, 255, .22); }
+.points .fait { background: var(--miel); }
+.points .ici { background: #fff; transform: scale(1.3); }
+.quiz-resultat { margin: 0; font-size: 20px; font-weight: 700; }
+
+/* ---------- settings */
+.voile { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; padding: 16px; background: rgba(30, 43, 87, .45); }
+.fenetre {
+  width: min(460px, 100%); display: flex; flex-direction: column; gap: 12px;
+  background: var(--creme); border: 4px solid var(--confiture); border-radius: 24px; padding: 24px;
+}
+.fenetre h2 { margin: 0; color: var(--confiture); font-size: 26px; }
+.fenetre p { margin: 0; font-weight: 700; }
+.choix-ligne { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.choix { min-height: 54px; border-radius: 14px; border: 3px solid var(--encre); background: var(--blanc); font-weight: 800; font-size: 18px; }
+.choix.actif { background: var(--encre); color: #fff; }
+.petit { font-size: 14px; color: var(--brun); font-weight: 600 !important; }
+
+@media (max-width: 520px) {
+  .actions .btn { min-width: 0; flex: 1; }
+  .reponses { gap: 12px; }
+  .reponse { flex-basis: 100%; min-height: 64px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .carte-int { transition: none; }
+  .carte.entre, .etoiles.grand span { animation: none; }
+}
