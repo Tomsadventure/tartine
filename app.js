@@ -48,6 +48,9 @@
   const ordre = ids => melanger(ids).sort((a, b) => RANG[boite(a)] - RANG[boite(b)]);
 
   // ---------- sound: one line at a time, like in the game (Web Audio – iPadOS allows it after the first tap)
+  // iPhone (2026-10-18, the user: no sound at all): Safari's Web Audio is of the type « ambient » – silent while the phone is on
+  // silent mode. « playback » (iOS 17+) makes it sound like a video does.
+  try { if (navigator.audioSession) navigator.audioSession.type = 'playback'; } catch (e) { /* older iOS: switch silent mode off */ }
   const Son = (() => {
     let ctx = null, source = null, jeton = 0;
     const tampons = new Map();
@@ -99,6 +102,7 @@
     return { dire, stop, debloquer: contexte };
   })();
   ['touchend', 'click'].forEach(t => document.addEventListener(t, () => Son.debloquer(), { passive: true }));
+  document.addEventListener('touchstart', () => {}, { passive: true });      // iOS shows the pressed look (:active) only with this
 
   const aMot = m => m.aw ? 'audio/w/' + m.aw : null;
   const aSatz = m => m.as ? 'audio/w/' + m.as : null;
@@ -184,11 +188,11 @@
     });
     const diff = paquetDifficiles();
     nouvelEcran(el('div', { class: 'accueil' },
-      el('img', { class: 'titre-img', src: 'img/titre.webp', alt: 'La Confiture' }),
+      el('img', { class: 'titre-img', src: 'img/titre.webp', width: 960, height: 586, alt: 'La Confiture' }),
       el('h1', { class: 'titre-app' }, 'Les cartes de Tartine'),
       el('div', { class: 'scene' },
         el('button', { class: 'tartine', 'aria-label': 'Tartine sprechen lassen', onclick: () => Son.dire(aT(salut)) },
-          el('img', { src: 'img/tartine.webp', alt: '' })),
+          el('img', { src: 'img/tartine.webp', width: 398, height: 560, alt: '' })),
         bulle(salut, 'accueil')),
       el('div', { class: 'unites' }, unites),
       diff.ids.length ? el('div', { class: 'difficiles' }, tuilePaquet(diff, ecranAccueil)) : null,
@@ -222,6 +226,8 @@
         ecranAccueil();
       }),
       el('p', { class: 'petit' }, 'Stand ' + D.version + ' · ' + Object.keys(MOTS).length + ' Wörter'),
+      bouton('btn-creme', 'Ton testen', 'Tartine sagt Hallo', () => Son.dire(aT(D.lignes.accueil))),
+      el('p', { class: 'petit' }, 'Kein Ton? Lautstärke-Tasten drücken. Auf einem iPhone mit iOS älter als 17 zusätzlich den Stumm-Modus ausschalten.'),
       el('p', { class: 'petit' }, 'Schrift: Nunito (SIL Open Font License, fonts/OFL.txt)'),
       bouton('btn-confiture', 'Fertig', null, () => voile.remove())));
     document.body.append(voile);
@@ -310,7 +316,7 @@
       const l = ligne('Richtig');
       compteur.textContent = '';
       zone.replaceChildren(el('div', { class: 'fin' },
-        el('img', { class: 'fin-tartine', src: 'img/tartine.webp', alt: '' }),
+        el('img', { class: 'fin-tartine', src: 'img/tartine.webp', width: 398, height: 560, alt: '' }),
         bulle(l),
         el('p', { class: 'fin-texte' }, file.length + ' Karten geübt – ' + sus + ' × « Je sais ! »')));
       actions.classList.add('visible');

@@ -26,7 +26,7 @@
 }
 
 * { box-sizing: border-box; }
-html { -webkit-text-size-adjust: 100%; }
+html { -webkit-text-size-adjust: 100%; touch-action: manipulation; background-color: var(--fond); }   /* no double-tap zoom (iPhone) */
 body {
   margin: 0;
   min-height: 100vh;
@@ -188,6 +188,11 @@ img { -webkit-user-drag: none; }
 .verso .mot-img { width: min(100%, 35.2vh); }        /* the back has more text: the picture 22 % of the screen height, so the buttons stay on an iPad in landscape */
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; visibility: hidden; opacity: 0; transition: opacity .2s; }
 .actions.visible { visibility: visible; opacity: 1; }
+/* On a small screen the card may be taller than the screen – the buttons stay at the bottom edge (iPhone, 2026-10-18) */
+.actions {
+  position: sticky; bottom: 0; z-index: 2; margin: 0 -16px -8px; padding: 14px 16px max(10px, env(safe-area-inset-bottom));
+  background: linear-gradient(rgba(246, 224, 184, 0), var(--fond-2) 45%);
+}
 .actions .btn { min-width: 170px; }
 .fin { display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; }
 .fin-tartine { width: 130px; height: auto; }
@@ -230,6 +235,34 @@ img { -webkit-user-drag: none; }
 .choix.actif { background: var(--encre); color: #fff; }
 .petit { font-size: 14px; color: var(--brun); font-weight: 600 !important; }
 
+/* Low screens – an iPhone turned sideways (2026-10-18): all a bit smaller, so a quiz question with its answers fits */
+@media (max-height: 500px) {
+  #app { gap: 10px; padding-top: max(8px, env(safe-area-inset-top)); padding-bottom: max(10px, env(safe-area-inset-bottom)); }
+  .entete { grid-template-columns: 44px 1fr auto; gap: 10px; }
+  .retour { width: 44px; height: 44px; }
+  .retour svg { width: 22px; height: 22px; }
+  .entete-titre h1 { font-size: 20px; }
+  .entete-titre p { display: none; }
+  .quiz { gap: 10px; padding: 10px 16px; border-radius: 22px; }
+  .quiz-mot { font-size: clamp(24px, 7vh, 34px); }
+  .bulle { padding: 6px 14px; gap: 10px; }
+  .bulle-tete { width: 36px; height: 36px; }
+  .bulle-fr { font-size: 17px; }
+  .bulle-de { font-size: 13px; }
+  .reponses { gap: 12px; }
+  .reponse { min-height: 52px; font-size: 18px; }
+  .son { width: 44px; height: 44px; }
+  .son svg { width: 22px; height: 22px; }
+  .face { min-height: 0; padding: 14px 18px; gap: 6px; }
+  .etoiles.grand span { font-size: 48px; }
+  .btn { min-height: 52px; }
+  .accueil { gap: 8px; }
+  .titre-img { width: min(190px, 36vw); }
+  .titre-app { margin: -4px 0 0; font-size: 24px; }
+  .tartine img { width: 60px; }
+  .tuile-unite { padding: 10px 18px; }
+  .u-nom { font-size: 22px; }
+}
 @media (max-width: 520px) {
   .actions .btn { min-width: 0; flex: 1; }
   .reponses { gap: 12px; }
