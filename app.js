@@ -27,6 +27,8 @@
     return a;
   }
   const attendre = ms => new Promise(r => setTimeout(r, ms));
+  // « concentré/concentrée » may break after the slash – otherwise a long word makes the card wider than a phone
+  const coupe = s => String(s).split('/').flatMap((t, k, a) => k < a.length - 1 ? [t + '/', el('wbr')] : [t]);
   const hasard = a => a[Math.floor(Math.random() * a.length)];
 
   // ---------- progress: a box per word (0 = not seen, 1 = again, 2 = almost, 3 = sure) and the best stars per deck
@@ -248,8 +250,8 @@
   function faceComplete(m) {
     return [
       image(m),
-      el('div', { class: 'ligne-son' }, el('p', { class: 'mot-fr' }, m.fr), boutonSon('Wort anhören', () => Son.dire(aMot(m)))),
-      el('p', { class: 'mot-de' }, m.de),
+      el('div', { class: 'ligne-son' }, el('p', { class: 'mot-fr' }, coupe(m.fr)), boutonSon('Wort anhören', () => Son.dire(aMot(m)))),
+      el('p', { class: 'mot-de' }, coupe(m.de)),
       el('hr'),
       el('div', { class: 'ligne-son' }, el('p', { class: 'satz-fr' }, m.sfr), boutonSon('Satz anhören', () => Son.dire(aSatz(m)))),
       el('p', { class: 'satz-de' }, m.sde),
@@ -275,8 +277,8 @@
       compteur.textContent = (i + 1) + ' / ' + file.length;
       const recto = el('div', { class: 'face recto' },
         image(m),
-        fr ? el('div', { class: 'ligne-son' }, el('p', { class: 'mot-fr grand' }, m.fr), boutonSon('Wort anhören', () => Son.dire(aMot(m))))
-          : el('p', { class: 'mot-de grand' }, m.de),
+        fr ? el('div', { class: 'ligne-son' }, el('p', { class: 'mot-fr grand' }, coupe(m.fr)), boutonSon('Wort anhören', () => Son.dire(aMot(m))))
+          : el('p', { class: 'mot-de grand' }, coupe(m.de)),
         fr ? null : el('p', { class: 'question-de' }, 'Wie heisst das auf Französisch?'),
         el('p', { class: 'tippe' }, 'Tippe auf die Karte'));
       const carte = el('div', { class: 'carte entre', role: 'button', tabindex: '0', 'aria-label': 'Karte umdrehen' },
@@ -349,7 +351,7 @@
         const l = ligne(item.type);
         const options = melanger([m, ...leurres(m, 2)]);
         let b0 = bulle(l, 'quiz'), repondu = false;
-        const boutons = options.map(o => el('button', { class: 'reponse', onclick: e => repondre(o, e.currentTarget) }, fr ? o.de : o.fr));
+        const boutons = options.map(o => el('button', { class: 'reponse', onclick: e => repondre(o, e.currentTarget) }, coupe(fr ? o.de : o.fr)));
 
         async function repondre(o, b) {
           if (repondu) return;
@@ -374,7 +376,7 @@
 
         panneau.replaceChildren(
           b0,
-          el('div', { class: 'ligne-son' }, el('p', { class: 'quiz-mot' }, fr ? m.fr : m.de),
+          el('div', { class: 'ligne-son' }, el('p', { class: 'quiz-mot' }, coupe(fr ? m.fr : m.de)),
             fr ? boutonSon('Wort anhören', () => Son.dire(aMot(m))) : null),
           el('div', { class: 'reponses' }, boutons),
           el('div', { class: 'points' }, file.map((_, k) => el('span', { class: k < q ? 'fait' : k === q ? 'ici' : null }))));

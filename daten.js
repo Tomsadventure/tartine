@@ -1,5 +1,5 @@
 window.DATEN = {
- "version": "2026-10-18 11:53",
+ "version": "2026-10-18 12:39",
  "unites": [
   {
    "id": "u1",
@@ -200,7 +200,8 @@ window.DATEN = {
    "sde": "Ich mache meine Hausaufgaben zu Hause.",
    "h": "les devoirs = m pl",
    "aw": "U1_01_WortFR.mp3",
-   "as": "U1_01_SatzFR.mp3"
+   "as": "U1_01_SatzFR.mp3",
+   "img": "U1_01.webp"
   },
   "U1_02": {
    "id": "U1_02",
@@ -212,7 +213,8 @@ window.DATEN = {
    "sde": "Die Katze ist zu Hause.",
    "h": "neu im Satz: le chat = die Katze",
    "aw": "U1_02_WortFR.mp3",
-   "as": "U1_02_SatzFR.mp3"
+   "as": "U1_02_SatzFR.mp3",
+   "img": "U1_02.webp"
   },
   "U1_03": {
    "id": "U1_03",
@@ -224,7 +226,8 @@ window.DATEN = {
    "sde": "Am Mittag bin ich in der Schule.",
    "h": "",
    "aw": "U1_03_WortFR.mp3",
-   "as": "U1_03_SatzFR.mp3"
+   "as": "U1_03_SatzFR.mp3",
+   "img": "U1_03.webp"
   },
   "U1_04": {
    "id": "U1_04",
@@ -236,7 +239,8 @@ window.DATEN = {
    "sde": "In der Nacht schlafe ich auf einer Insel.",
    "h": "",
    "aw": "U1_04_WortFR.mp3",
-   "as": "U1_04_SatzFR.mp3"
+   "as": "U1_04_SatzFR.mp3",
+   "img": "U1_04.webp"
   },
   "U1_05": {
    "id": "U1_05",
@@ -248,7 +252,8 @@ window.DATEN = {
    "sde": "Am Morgen lese ich in der U-Bahn.",
    "h": "",
    "aw": "U1_05_WortFR.mp3",
-   "as": "U1_05_SatzFR.mp3"
+   "as": "U1_05_SatzFR.mp3",
+   "img": "U1_05.webp"
   },
   "U1_06": {
    "id": "U1_06",
@@ -260,7 +265,8 @@ window.DATEN = {
    "sde": "Ich spiele draussen.",
    "h": "neu im Satz: jouer = spielen",
    "aw": "U1_06_WortFR.mp3",
-   "as": "U1_06_SatzFR.mp3"
+   "as": "U1_06_SatzFR.mp3",
+   "img": "U1_06.webp"
   },
   "U1_07": {
    "id": "U1_07",
@@ -272,7 +278,8 @@ window.DATEN = {
    "sde": "Der Ball ist im Wasser!",
    "h": "neu im Satz: le ballon = der Ball",
    "aw": "U1_07_WortFR.mp3",
-   "as": "U1_07_SatzFR.mp3"
+   "as": "U1_07_SatzFR.mp3",
+   "img": "U1_07.webp"
   },
   "U1_08": {
    "id": "U1_08",
@@ -284,7 +291,8 @@ window.DATEN = {
    "sde": "Ich lese auf dem Tablet.",
    "h": "",
    "aw": "U1_08_WortFR.mp3",
-   "as": "U1_08_SatzFR.mp3"
+   "as": "U1_08_SatzFR.mp3",
+   "img": "U1_08.webp"
   },
   "U1_09": {
    "id": "U1_09",
@@ -308,7 +316,8 @@ window.DATEN = {
    "sde": "Wo ist Tartine? Vor der Schule!",
    "h": "",
    "aw": "U1_10_WortFR.mp3",
-   "as": "U1_10_SatzFR.mp3"
+   "as": "U1_10_SatzFR.mp3",
+   "img": "U1_10.webp"
   },
   "U1_11": {
    "id": "U1_11",
@@ -356,7 +365,8 @@ window.DATEN = {
    "sde": "Wer liest unter dem Baum? Meine Freundin!",
    "h": "",
    "aw": "U1_14_WortFR.mp3",
-   "as": "U1_14_SatzFR.mp3"
+   "as": "U1_14_SatzFR.mp3",
+   "img": "U1_14.webp"
   },
   "U1_15": {
    "id": "U1_15",
@@ -368,7 +378,8 @@ window.DATEN = {
    "sde": "Ich bin auf der Plattform.",
    "h": "neu im Satz: la plateforme = die Plattform",
    "aw": "U1_15_WortFR.mp3",
-   "as": "U1_15_SatzFR.mp3"
+   "as": "U1_15_SatzFR.mp3",
+   "img": "U1_15.webp"
   },
   "U1_16": {
    "id": "U1_16",
@@ -380,7 +391,8 @@ window.DATEN = {
    "sde": "Ich bin unter dem Tisch.",
    "h": "neu im Satz: la table = der Tisch",
    "aw": "U1_16_WortFR.mp3",
-   "as": "U1_16_SatzFR.mp3"
+   "as": "U1_16_SatzFR.mp3",
+   "img": "U1_16.webp"
   },
   "U1_17": {
    "id": "U1_17",
@@ -392,7 +404,8 @@ window.DATEN = {
    "sde": "Ich bin in der Kiste.",
    "h": "neu im Satz: la boîte = die Kiste",
    "aw": "U1_17_WortFR.mp3",
-   "as": "U1_17_SatzFR.mp3"
+   "as": "U1_17_SatzFR.mp3",
+   "img": "U1_17.webp"
   },
   "U1_18": {
    "id": "U1_18",
@@ -404,7 +417,8 @@ window.DATEN = {
    "sde": "Ich bin mitten auf dem Pausenplatz.",
    "h": "neu im Satz: la cour = der Pausenplatz",
    "aw": "U1_18_WortFR.mp3",
-   "as": "U1_18_SatzFR.mp3"
+   "as": "U1_18_SatzFR.mp3",
+   "img": "U1_18.webp"
   },
   "U1_19": {
    "id": "U1_19",
@@ -416,7 +430,8 @@ window.DATEN = {
    "sde": "Ich bin in der Schule.",
    "h": "",
    "aw": "U1_19_WortFR.mp3",
-   "as": "U1_19_SatzFR.mp3"
+   "as": "U1_19_SatzFR.mp3",
+   "img": "U1_19.webp"
   },
   "U1_20": {
    "id": "U1_20",
@@ -428,7 +443,8 @@ window.DATEN = {
    "sde": "Ich bin vor der Kiste.",
    "h": "neu im Satz: la boîte = die Kiste",
    "aw": "U1_20_WortFR.mp3",
-   "as": "U1_20_SatzFR.mp3"
+   "as": "U1_20_SatzFR.mp3",
+   "img": "U1_20.webp"
   },
   "U1_21": {
    "id": "U1_21",
@@ -440,7 +456,8 @@ window.DATEN = {
    "sde": "Ich bin hinter der Kiste.",
    "h": "neu im Satz: la boîte = die Kiste",
    "aw": "U1_21_WortFR.mp3",
-   "as": "U1_21_SatzFR.mp3"
+   "as": "U1_21_SatzFR.mp3",
+   "img": "U1_21.webp"
   },
   "U1_22": {
    "id": "U1_22",
@@ -452,7 +469,8 @@ window.DATEN = {
    "sde": "Ich bin zwischen der blauen und der roten Säule.",
    "h": "neu im Satz: le pilier = die Säule, bleu = blau, rouge = rot",
    "aw": "U1_22_WortFR.mp3",
-   "as": "U1_22_SatzFR.mp3"
+   "as": "U1_22_SatzFR.mp3",
+   "img": "U1_22.webp"
   },
   "U1_23": {
    "id": "U1_23",
@@ -464,7 +482,8 @@ window.DATEN = {
    "sde": "Ich schlafe draussen.",
    "h": "",
    "aw": "U1_23_WortFR.mp3",
-   "as": "U1_23_SatzFR.mp3"
+   "as": "U1_23_SatzFR.mp3",
+   "img": "U1_23.webp"
   },
   "U1_24": {
    "id": "U1_24",
@@ -476,7 +495,8 @@ window.DATEN = {
    "sde": "Ich lese ein Buch.",
    "h": "neu im Satz: le livre = das Buch",
    "aw": "U1_24_WortFR.mp3",
-   "as": "U1_24_SatzFR.mp3"
+   "as": "U1_24_SatzFR.mp3",
+   "img": "U1_24.webp"
   },
   "U1_25": {
    "id": "U1_25",
@@ -488,7 +508,8 @@ window.DATEN = {
    "sde": "Ich baue eine Sandburg am Meer.",
    "h": "neu im Satz: le château de sable = die Sandburg",
    "aw": "U1_25_WortFR.mp3",
-   "as": "U1_25_SatzFR.mp3"
+   "as": "U1_25_SatzFR.mp3",
+   "img": "U1_25.webp"
   },
   "U1_26": {
    "id": "U1_26",
@@ -500,7 +521,8 @@ window.DATEN = {
    "sde": "Ich bin unter einem Baum.",
    "h": "",
    "aw": "U1_26_WortFR.mp3",
-   "as": "U1_26_SatzFR.mp3"
+   "as": "U1_26_SatzFR.mp3",
+   "img": "U1_26.webp"
   },
   "U1_27": {
    "id": "U1_27",
@@ -512,7 +534,8 @@ window.DATEN = {
    "sde": "Ich lese mit meiner Freundin.",
    "h": "ami = m, amie = f – klingen gleich",
    "aw": "U1_27_WortFR.mp3",
-   "as": "U1_27_SatzFR.mp3"
+   "as": "U1_27_SatzFR.mp3",
+   "img": "U1_27.webp"
   },
   "U1_28": {
    "id": "U1_28",
@@ -524,7 +547,8 @@ window.DATEN = {
    "sde": "Meine Freundin ist allein.",
    "h": "seul = m, seule = f – klingen gleich",
    "aw": "U1_28_WortFR.mp3",
-   "as": "U1_28_SatzFR.mp3"
+   "as": "U1_28_SatzFR.mp3",
+   "img": "U1_28.webp"
   },
   "U1_29": {
    "id": "U1_29",
@@ -536,7 +560,8 @@ window.DATEN = {
    "sde": "Am Morgen bin ich zu Hause.",
    "h": "",
    "aw": "U1_29_WortFR.mp3",
-   "as": "U1_29_SatzFR.mp3"
+   "as": "U1_29_SatzFR.mp3",
+   "img": "U1_29.webp"
   },
   "U1_30": {
    "id": "U1_30",
@@ -548,7 +573,8 @@ window.DATEN = {
    "sde": "Am Mittag schläft die Katze draussen.",
    "h": "neu im Satz: le chat = die Katze",
    "aw": "U1_30_WortFR.mp3",
-   "as": "U1_30_SatzFR.mp3"
+   "as": "U1_30_SatzFR.mp3",
+   "img": "U1_30.webp"
   },
   "U1_31": {
    "id": "U1_31",
@@ -560,7 +586,8 @@ window.DATEN = {
    "sde": "Am Nachmittag lese ich draussen.",
    "h": "m oder f",
    "aw": "U1_31_WortFR.mp3",
-   "as": "U1_31_SatzFR.mp3"
+   "as": "U1_31_SatzFR.mp3",
+   "img": "U1_31.webp"
   },
   "U1_32": {
    "id": "U1_32",
@@ -572,7 +599,8 @@ window.DATEN = {
    "sde": "Am Abend bin ich am Meer.",
    "h": "",
    "aw": "U1_32_WortFR.mp3",
-   "as": "U1_32_SatzFR.mp3"
+   "as": "U1_32_SatzFR.mp3",
+   "img": "U1_32.webp"
   },
   "U1_33": {
    "id": "U1_33",
@@ -584,7 +612,8 @@ window.DATEN = {
    "sde": "In der Nacht schlafe ich.",
    "h": "",
    "aw": "U1_33_WortFR.mp3",
-   "as": "U1_33_SatzFR.mp3"
+   "as": "U1_33_SatzFR.mp3",
+   "img": "U1_33.webp"
   },
   "U1_34": {
    "id": "U1_34",
@@ -596,7 +625,8 @@ window.DATEN = {
    "sde": "Am Wochenende lese ich mit meinem Freund.",
    "h": "",
    "aw": "U1_34_WortFR.mp3",
-   "as": "U1_34_SatzFR.mp3"
+   "as": "U1_34_SatzFR.mp3",
+   "img": "U1_34.webp"
   },
   "U1_35": {
    "id": "U1_35",
@@ -608,7 +638,8 @@ window.DATEN = {
    "sde": "Die Welt ist gross.",
    "h": "",
    "aw": "U1_35_WortFR.mp3",
-   "as": "U1_35_SatzFR.mp3"
+   "as": "U1_35_SatzFR.mp3",
+   "img": "U1_35.webp"
   },
   "U1_36": {
    "id": "U1_36",
@@ -632,7 +663,8 @@ window.DATEN = {
    "sde": "Die Katze frisst unter einer Kokospalme.",
    "h": "neu im Satz: manger = essen (bei Tieren: fressen)",
    "aw": "U1_37_WortFR.mp3",
-   "as": "U1_37_SatzFR.mp3"
+   "as": "U1_37_SatzFR.mp3",
+   "img": "U1_37.webp"
   },
   "U1_38": {
    "id": "U1_38",
@@ -644,7 +676,8 @@ window.DATEN = {
    "sde": "Der Garten ist der Ort der Katzen.",
    "h": "neu im Satz: le jardin = der Garten",
    "aw": "U1_38_WortFR.mp3",
-   "as": "U1_38_SatzFR.mp3"
+   "as": "U1_38_SatzFR.mp3",
+   "img": "U1_38.webp"
   },
   "U1_39": {
    "id": "U1_39",
@@ -656,7 +689,8 @@ window.DATEN = {
    "sde": "Ich bin im Gang der Métro.",
    "h": "",
    "aw": "U1_39_WortFR.mp3",
-   "as": "U1_39_SatzFR.mp3"
+   "as": "U1_39_SatzFR.mp3",
+   "img": "U1_39.webp"
   },
   "U1_40": {
    "id": "U1_40",
@@ -668,7 +702,8 @@ window.DATEN = {
    "sde": "Zwei Katzen spielen auf dem Sand.",
    "h": "neu im Satz: jouer = spielen",
    "aw": "U1_40_WortFR.mp3",
-   "as": "U1_40_SatzFR.mp3"
+   "as": "U1_40_SatzFR.mp3",
+   "img": "U1_40.webp"
   },
   "U1_41": {
    "id": "U1_41",
@@ -680,7 +715,8 @@ window.DATEN = {
    "sde": "Tartine wohnt im Dorf.",
    "h": "neu im Satz: habiter = wohnen",
    "aw": "U1_41_WortFR.mp3",
-   "as": "U1_41_SatzFR.mp3"
+   "as": "U1_41_SatzFR.mp3",
+   "img": "U1_41.webp"
   },
   "U1_42": {
    "id": "U1_42",
@@ -692,7 +728,8 @@ window.DATEN = {
    "sde": "Das Fest ist um 19 Uhr.",
    "h": "neu im Satz: la fête = das Fest",
    "aw": "U1_42_WortFR.mp3",
-   "as": "U1_42_SatzFR.mp3"
+   "as": "U1_42_SatzFR.mp3",
+   "img": "U1_42.webp"
   },
   "U1_43": {
    "id": "U1_43",
@@ -716,7 +753,8 @@ window.DATEN = {
    "sde": "Welcher Stuhl? Der grosse, bequeme Stuhl!",
    "h": "quel = m, quelle = f – klingen gleich; neu im Satz: la chaise = der Stuhl",
    "aw": "U1_44_WortFR.mp3",
-   "as": "U1_44_SatzFR.mp3"
+   "as": "U1_44_SatzFR.mp3",
+   "img": "U1_44.webp"
   },
   "U1_45": {
    "id": "U1_45",
@@ -728,7 +766,8 @@ window.DATEN = {
    "sde": "Die Katze denkt vor dem Bild nach.",
    "h": "neu im Satz: le tableau = das Bild",
    "aw": "U1_45_WortFR.mp3",
-   "as": "U1_45_SatzFR.mp3"
+   "as": "U1_45_SatzFR.mp3",
+   "img": "U1_45.webp"
   },
   "U1_46": {
    "id": "U1_46",
@@ -740,7 +779,8 @@ window.DATEN = {
    "sde": "Die Katze schläft in einer Hängematte.",
    "h": "",
    "aw": "U1_46_WortFR.mp3",
-   "as": "U1_46_SatzFR.mp3"
+   "as": "U1_46_SatzFR.mp3",
+   "img": "U1_46.webp"
   },
   "U1_47": {
    "id": "U1_47",
@@ -752,7 +792,8 @@ window.DATEN = {
    "sde": "Die Katze liest auf einem grossen, bequemen Stuhl.",
    "h": "",
    "aw": "U1_47_WortFR.mp3",
-   "as": "U1_47_SatzFR.mp3"
+   "as": "U1_47_SatzFR.mp3",
+   "img": "U1_47.webp"
   },
   "U1_48": {
    "id": "U1_48",
@@ -764,7 +805,8 @@ window.DATEN = {
    "sde": "Am Morgen arbeitet die Katze.",
    "h": "",
    "aw": "U1_48_WortFR.mp3",
-   "as": "U1_48_SatzFR.mp3"
+   "as": "U1_48_SatzFR.mp3",
+   "img": "U1_48.webp"
   },
   "U1_49": {
    "id": "U1_49",
@@ -776,7 +818,8 @@ window.DATEN = {
    "sde": "Ich arbeite draussen, um motiviert zu sein.",
    "h": "motivé = m, motivée = f – klingen gleich",
    "aw": "U1_49_WortFR.mp3",
-   "as": "U1_49_SatzFR.mp3"
+   "as": "U1_49_SatzFR.mp3",
+   "img": "U1_49.webp"
   },
   "U1_50": {
    "id": "U1_50",
@@ -788,7 +831,8 @@ window.DATEN = {
    "sde": "Ich arbeite allein, um konzentriert zu bleiben.",
    "h": "concentré = m, concentrée = f – klingen gleich",
    "aw": "U1_50_WortFR.mp3",
-   "as": "U1_50_SatzFR.mp3"
+   "as": "U1_50_SatzFR.mp3",
+   "img": "U1_50.webp"
   },
   "U1_51": {
    "id": "U1_51",
@@ -800,7 +844,8 @@ window.DATEN = {
    "sde": "Ich arbeite mit meinem Freund, um Hilfe zu bekommen.",
    "h": "",
    "aw": "U1_51_WortFR.mp3",
-   "as": "U1_51_SatzFR.mp3"
+   "as": "U1_51_SatzFR.mp3",
+   "img": "U1_51.webp"
   },
   "U1_52": {
    "id": "U1_52",
@@ -812,7 +857,8 @@ window.DATEN = {
    "sde": "Ich mache meine Hausaufgaben auf dem Tablet, weil es lustig ist.",
    "h": "",
    "aw": "U1_52_WortFR.mp3",
-   "as": "U1_52_SatzFR.mp3"
+   "as": "U1_52_SatzFR.mp3",
+   "img": "U1_52.webp"
   },
   "U1_53": {
    "id": "U1_53",
@@ -824,7 +870,8 @@ window.DATEN = {
    "sde": "Ich mache meine Hausaufgaben am Morgen, um am Abend frei zu sein.",
    "h": "",
    "aw": "U1_53_WortFR.mp3",
-   "as": "U1_53_SatzFR.mp3"
+   "as": "U1_53_SatzFR.mp3",
+   "img": "U1_53.webp"
   },
   "U1_54": {
    "id": "U1_54",
@@ -836,7 +883,8 @@ window.DATEN = {
    "sde": "Ich mache meine Hausaufgaben am Mittag, um danach frei zu sein.",
    "h": "",
    "aw": "U1_54_WortFR.mp3",
-   "as": "U1_54_SatzFR.mp3"
+   "as": "U1_54_SatzFR.mp3",
+   "img": "U1_54.webp"
   },
   "U1_55": {
    "id": "U1_55",
@@ -848,7 +896,8 @@ window.DATEN = {
    "sde": "Ich arbeite zu Hause, um Hilfe von meinen Eltern zu haben.",
    "h": "",
    "aw": "U1_55_WortFR.mp3",
-   "as": "U1_55_SatzFR.mp3"
+   "as": "U1_55_SatzFR.mp3",
+   "img": "U1_55.webp"
   },
   "U1_56": {
    "id": "U1_56",
@@ -860,7 +909,8 @@ window.DATEN = {
    "sde": "Ich mache meine Hausaufgaben am Wochenende, um eine angenehme Woche zu haben.",
    "h": "",
    "aw": "U1_56_WortFR.mp3",
-   "as": "U1_56_SatzFR.mp3"
+   "as": "U1_56_SatzFR.mp3",
+   "img": "U1_56.webp"
   },
   "U2_01": {
    "id": "U2_01",
@@ -872,7 +922,8 @@ window.DATEN = {
    "sde": "Meine Freundin wohnt in diesem Haus.",
    "h": "neu im Satz: habiter = wohnen; cette = diese",
    "aw": "U2_01_WortFR.mp3",
-   "as": "U2_01_SatzFR.mp3"
+   "as": "U2_01_SatzFR.mp3",
+   "img": "U2_01.webp"
   },
   "U2_02": {
    "id": "U2_02",
@@ -884,7 +935,8 @@ window.DATEN = {
    "sde": "Meine Freundin wohnt in einer Wohnung im zweiten Stock.",
    "h": "",
    "aw": "U2_02_WortFR.mp3",
-   "as": "U2_02_SatzFR.mp3"
+   "as": "U2_02_SatzFR.mp3",
+   "img": "U2_02.webp"
   },
   "U2_03": {
    "id": "U2_03",
@@ -896,7 +948,8 @@ window.DATEN = {
    "sde": "Ich esse in der Küche.",
    "h": "neu im Satz: manger = essen",
    "aw": "U2_03_WortFR.mp3",
-   "as": "U2_03_SatzFR.mp3"
+   "as": "U2_03_SatzFR.mp3",
+   "img": "U2_03.webp"
   },
   "U2_04": {
    "id": "U2_04",
@@ -908,7 +961,8 @@ window.DATEN = {
    "sde": "Am Abend lese ich im Wohnzimmer.",
    "h": "",
    "aw": "U2_04_WortFR.mp3",
-   "as": "U2_04_SatzFR.mp3"
+   "as": "U2_04_SatzFR.mp3",
+   "img": "U2_04.webp"
   },
   "U2_05": {
    "id": "U2_05",
@@ -920,7 +974,8 @@ window.DATEN = {
    "sde": "In der Nacht schlafe ich in meinem Zimmer.",
    "h": "",
    "aw": "U2_05_WortFR.mp3",
-   "as": "U2_05_SatzFR.mp3"
+   "as": "U2_05_SatzFR.mp3",
+   "img": "U2_05.webp"
   },
   "U2_06": {
    "id": "U2_06",
@@ -932,7 +987,8 @@ window.DATEN = {
    "sde": "Die Toilette ist hier.",
    "h": "les toilettes = f pl; WC spricht man «vécé»; neu im Satz: ici = hier",
    "aw": "U2_06_WortFR.mp3",
-   "as": "U2_06_SatzFR.mp3"
+   "as": "U2_06_SatzFR.mp3",
+   "img": "U2_06.webp"
   },
   "U2_07": {
    "id": "U2_07",
@@ -944,7 +1000,8 @@ window.DATEN = {
    "sde": "Am Morgen bin ich im Badezimmer.",
    "h": "",
    "aw": "U2_07_WortFR.mp3",
-   "as": "U2_07_SatzFR.mp3"
+   "as": "U2_07_SatzFR.mp3",
+   "img": "U2_07.webp"
   },
   "U2_08": {
    "id": "U2_08",
@@ -956,7 +1013,8 @@ window.DATEN = {
    "sde": "Das Haus hat drei Stockwerke.",
    "h": "neu im Satz: trois = drei",
    "aw": "U2_08_WortFR.mp3",
-   "as": "U2_08_SatzFR.mp3"
+   "as": "U2_08_SatzFR.mp3",
+   "img": "U2_08.webp"
   },
   "U2_09": {
    "id": "U2_09",
@@ -968,7 +1026,8 @@ window.DATEN = {
    "sde": "Die Apotheke ist im Erdgeschoss.",
    "h": "",
    "aw": "U2_09_WortFR.mp3",
-   "as": "U2_09_SatzFR.mp3"
+   "as": "U2_09_SatzFR.mp3",
+   "img": "U2_09.webp"
   },
   "U2_10": {
    "id": "U2_10",
@@ -980,7 +1039,8 @@ window.DATEN = {
    "sde": "Die Katze spielt im Untergeschoss.",
    "h": "",
    "aw": "U2_10_WortFR.mp3",
-   "as": "U2_10_SatzFR.mp3"
+   "as": "U2_10_SatzFR.mp3",
+   "img": "U2_10.webp"
   },
   "U2_11": {
    "id": "U2_11",
@@ -992,7 +1052,8 @@ window.DATEN = {
    "sde": "Wo wohnst du? Ich wohne im ersten Stock!",
    "h": "",
    "aw": "U2_11_WortFR.mp3",
-   "as": "U2_11_SatzFR.mp3"
+   "as": "U2_11_SatzFR.mp3",
+   "img": "U2_11.webp"
   },
   "U2_12": {
    "id": "U2_12",
@@ -1004,7 +1065,8 @@ window.DATEN = {
    "sde": "Wohnst du im zweiten Stock? Ja, mit Mama und Papa!",
    "h": "neu im Satz: oui = ja; maman = Mama",
    "aw": "U2_12_WortFR.mp3",
-   "as": "U2_12_SatzFR.mp3"
+   "as": "U2_12_SatzFR.mp3",
+   "img": "U2_12.webp"
   },
   "U2_13": {
    "id": "U2_13",
@@ -1016,7 +1078,8 @@ window.DATEN = {
    "sde": "Der Pianist wohnt im dritten Stock.",
    "h": "neu im Satz: le pianiste = der Pianist",
    "aw": "U2_13_WortFR.mp3",
-   "as": "U2_13_SatzFR.mp3"
+   "as": "U2_13_SatzFR.mp3",
+   "img": "U2_13.webp"
   },
   "U2_14": {
    "id": "U2_14",
@@ -1028,7 +1091,8 @@ window.DATEN = {
    "sde": "Der Papa meiner Freundin arbeitet hier.",
    "h": "neu im Satz: papa = Papa; ici = hier",
    "aw": "U2_14_WortFR.mp3",
-   "as": "U2_14_SatzFR.mp3"
+   "as": "U2_14_SatzFR.mp3",
+   "img": "U2_14.webp"
   },
   "U2_15": {
    "id": "U2_15",
@@ -1040,7 +1104,8 @@ window.DATEN = {
    "sde": "Ich arbeite in der Apotheke, im Erdgeschoss.",
    "h": "",
    "aw": "U2_15_WortFR.mp3",
-   "as": "U2_15_SatzFR.mp3"
+   "as": "U2_15_SatzFR.mp3",
+   "img": "U2_15.webp"
   },
   "U2_16": {
    "id": "U2_16",
@@ -1052,7 +1117,8 @@ window.DATEN = {
    "sde": "Die Katze ist auf dem Bett.",
    "h": "",
    "aw": "U2_16_WortFR.mp3",
-   "as": "U2_16_SatzFR.mp3"
+   "as": "U2_16_SatzFR.mp3",
+   "img": "U2_16.webp"
   },
   "U2_17": {
    "id": "U2_17",
@@ -1064,7 +1130,8 @@ window.DATEN = {
    "sde": "Die Katze schläft unter dem Tisch.",
    "h": "",
    "aw": "U2_17_WortFR.mp3",
-   "as": "U2_17_SatzFR.mp3"
+   "as": "U2_17_SatzFR.mp3",
+   "img": "U2_17.webp"
   },
   "U2_18": {
    "id": "U2_18",
@@ -1076,7 +1143,8 @@ window.DATEN = {
    "sde": "Die Katze ist in der Badewanne!",
    "h": "neu im Satz: la baignoire = die Badewanne",
    "aw": "U2_18_WortFR.mp3",
-   "as": "U2_18_SatzFR.mp3"
+   "as": "U2_18_SatzFR.mp3",
+   "img": "U2_18.webp"
   },
   "U2_19": {
    "id": "U2_19",
@@ -1088,7 +1156,8 @@ window.DATEN = {
    "sde": "Der Teppich liegt in der Mitte des Wohnzimmers.",
    "h": "de + le = du",
    "aw": "U2_19_WortFR.mp3",
-   "as": "U2_19_SatzFR.mp3"
+   "as": "U2_19_SatzFR.mp3",
+   "img": "U2_19.webp"
   },
   "U2_20": {
    "id": "U2_20",
@@ -1100,7 +1169,8 @@ window.DATEN = {
    "sde": "Ich bin in der Apotheke.",
    "h": "",
    "aw": "U2_20_WortFR.mp3",
-   "as": "U2_20_SatzFR.mp3"
+   "as": "U2_20_SatzFR.mp3",
+   "img": "U2_20.webp"
   },
   "U2_21": {
    "id": "U2_21",
@@ -1112,7 +1182,8 @@ window.DATEN = {
    "sde": "Die Katze ist vor dem Fenster.",
    "h": "",
    "aw": "U2_21_WortFR.mp3",
-   "as": "U2_21_SatzFR.mp3"
+   "as": "U2_21_SatzFR.mp3",
+   "img": "U2_21.webp"
   },
   "U2_22": {
    "id": "U2_22",
@@ -1124,7 +1195,8 @@ window.DATEN = {
    "sde": "Die Katze ist hinter dem Sessel.",
    "h": "",
    "aw": "U2_22_WortFR.mp3",
-   "as": "U2_22_SatzFR.mp3"
+   "as": "U2_22_SatzFR.mp3",
+   "img": "U2_22.webp"
   },
   "U2_23": {
    "id": "U2_23",
@@ -1136,7 +1208,8 @@ window.DATEN = {
    "sde": "Die Katze ist zwischen dem Bett und dem Schrank.",
    "h": "",
    "aw": "U2_23_WortFR.mp3",
-   "as": "U2_23_SatzFR.mp3"
+   "as": "U2_23_SatzFR.mp3",
+   "img": "U2_23.webp"
   },
   "U2_24": {
    "id": "U2_24",
@@ -1148,7 +1221,8 @@ window.DATEN = {
    "sde": "Die Wohnung meiner Freundin ist oben.",
    "h": "",
    "aw": "U2_24_WortFR.mp3",
-   "as": "U2_24_SatzFR.mp3"
+   "as": "U2_24_SatzFR.mp3",
+   "img": "U2_24.webp"
   },
   "U2_25": {
    "id": "U2_25",
@@ -1160,7 +1234,8 @@ window.DATEN = {
    "sde": "Die Waschküche ist unten.",
    "h": "",
    "aw": "U2_25_WortFR.mp3",
-   "as": "U2_25_SatzFR.mp3"
+   "as": "U2_25_SatzFR.mp3",
+   "img": "U2_25.webp"
   },
   "U2_26": {
    "id": "U2_26",
@@ -1172,7 +1247,8 @@ window.DATEN = {
    "sde": "Die Türe der Apotheke ist grün.",
    "h": "neu im Satz: vert, verte = grün",
    "aw": "U2_26_WortFR.mp3",
-   "as": "U2_26_SatzFR.mp3"
+   "as": "U2_26_SatzFR.mp3",
+   "img": "U2_26.webp"
   },
   "U2_27": {
    "id": "U2_27",
@@ -1184,7 +1260,8 @@ window.DATEN = {
    "sde": "Ich schaue aus dem Fenster.",
    "h": "neu im Satz: regarder = schauen",
    "aw": "U2_27_WortFR.mp3",
-   "as": "U2_27_SatzFR.mp3"
+   "as": "U2_27_SatzFR.mp3",
+   "img": "U2_27.webp"
   },
   "U2_28": {
    "id": "U2_28",
@@ -1196,7 +1273,8 @@ window.DATEN = {
    "sde": "Mein Bett ist weiss.",
    "h": "neu im Satz: blanc = weiss",
    "aw": "U2_28_WortFR.mp3",
-   "as": "U2_28_SatzFR.mp3"
+   "as": "U2_28_SatzFR.mp3",
+   "img": "U2_28.webp"
   },
   "U2_29": {
    "id": "U2_29",
@@ -1208,7 +1286,8 @@ window.DATEN = {
    "sde": "Der Tisch steht im Esszimmer.",
    "h": "",
    "aw": "U2_29_WortFR.mp3",
-   "as": "U2_29_SatzFR.mp3"
+   "as": "U2_29_SatzFR.mp3",
+   "img": "U2_29.webp"
   },
   "U2_30": {
    "id": "U2_30",
@@ -1220,7 +1299,8 @@ window.DATEN = {
    "sde": "Es gibt sechs Stühle.",
    "h": "neu im Satz: il y a = es gibt; six = sechs",
    "aw": "U2_30_WortFR.mp3",
-   "as": "U2_30_SatzFR.mp3"
+   "as": "U2_30_SatzFR.mp3",
+   "img": "U2_30.webp"
   },
   "U2_31": {
    "id": "U2_31",
@@ -1232,7 +1312,8 @@ window.DATEN = {
    "sde": "In der Küche gibt es ein Gestell.",
    "h": "neu im Satz: il y a = es gibt",
    "aw": "U2_31_WortFR.mp3",
-   "as": "U2_31_SatzFR.mp3"
+   "as": "U2_31_SatzFR.mp3",
+   "img": "U2_31.webp"
   },
   "U2_32": {
    "id": "U2_32",
@@ -1244,7 +1325,8 @@ window.DATEN = {
    "sde": "Meine Kleider sind in einem Schrank.",
    "h": "neu im Satz: les vêtements = die Kleider",
    "aw": "U2_32_WortFR.mp3",
-   "as": "U2_32_SatzFR.mp3"
+   "as": "U2_32_SatzFR.mp3",
+   "img": "U2_32.webp"
   },
   "U2_33": {
    "id": "U2_33",
@@ -1256,7 +1338,8 @@ window.DATEN = {
    "sde": "Der Sessel ist blau.",
    "h": "neu im Satz: bleu = blau",
    "aw": "U2_33_WortFR.mp3",
-   "as": "U2_33_SatzFR.mp3"
+   "as": "U2_33_SatzFR.mp3",
+   "img": "U2_33.webp"
   },
   "U2_34": {
    "id": "U2_34",
@@ -1268,7 +1351,8 @@ window.DATEN = {
    "sde": "Die Katze spielt auf dem Teppich.",
    "h": "",
    "aw": "U2_34_WortFR.mp3",
-   "as": "U2_34_SatzFR.mp3"
+   "as": "U2_34_SatzFR.mp3",
+   "img": "U2_34.webp"
   },
   "U2_35": {
    "id": "U2_35",
@@ -1280,7 +1364,8 @@ window.DATEN = {
    "sde": "Die Lampe steht auf der Kommode.",
    "h": "neu im Satz: la lampe = die Lampe",
    "aw": "U2_35_WortFR.mp3",
-   "as": "U2_35_SatzFR.mp3"
+   "as": "U2_35_SatzFR.mp3",
+   "img": "U2_35.webp"
   },
   "U2_36": {
    "id": "U2_36",
@@ -1292,7 +1377,8 @@ window.DATEN = {
    "sde": "Die Pflanze steht vor dem Fenster.",
    "h": "",
    "aw": "U2_36_WortFR.mp3",
-   "as": "U2_36_SatzFR.mp3"
+   "as": "U2_36_SatzFR.mp3",
+   "img": "U2_36.webp"
   },
   "U2_37": {
    "id": "U2_37",
@@ -1304,7 +1390,8 @@ window.DATEN = {
    "sde": "Ich habe ein Poster von Tartine in meinem Zimmer.",
    "h": "neu im Satz: j'ai = ich habe",
    "aw": "U2_37_WortFR.mp3",
-   "as": "U2_37_SatzFR.mp3"
+   "as": "U2_37_SatzFR.mp3",
+   "img": "U2_37.webp"
   },
   "U2_38": {
    "id": "U2_38",
@@ -1316,7 +1403,8 @@ window.DATEN = {
    "sde": "Die Katze ist links von der Lampe.",
    "h": "à gauche = links; la lampe = die Lampe",
    "aw": "U2_38_WortFR.mp3",
-   "as": "U2_38_SatzFR.mp3"
+   "as": "U2_38_SatzFR.mp3",
+   "img": "U2_38.webp"
   },
   "U2_39": {
    "id": "U2_39",
@@ -1328,7 +1416,8 @@ window.DATEN = {
    "sde": "Die Pflanze steht links vom Klavier.",
    "h": "de + le = du; le piano = das Klavier",
    "aw": "U2_39_WortFR.mp3",
-   "as": "U2_39_SatzFR.mp3"
+   "as": "U2_39_SatzFR.mp3",
+   "img": "U2_39.webp"
   },
   "U2_40": {
    "id": "U2_40",
@@ -1340,7 +1429,8 @@ window.DATEN = {
    "sde": "Der Sessel steht rechts vom Gestell.",
    "h": "à droite = rechts",
    "aw": "U2_40_WortFR.mp3",
-   "as": "U2_40_SatzFR.mp3"
+   "as": "U2_40_SatzFR.mp3",
+   "img": "U2_40.webp"
   },
   "U2_41": {
    "id": "U2_41",
@@ -1352,7 +1442,8 @@ window.DATEN = {
    "sde": "Das Büchergestell ist im Wohnzimmer.",
    "h": "le séjour = le salon",
    "aw": "U2_41_WortFR.mp3",
-   "as": "U2_41_SatzFR.mp3"
+   "as": "U2_41_SatzFR.mp3",
+   "img": "U2_41.webp"
   },
   "U2_42": {
    "id": "U2_42",
@@ -1364,7 +1455,8 @@ window.DATEN = {
    "sde": "Am Abend essen wir im Esszimmer.",
    "h": "neu im Satz: on = man, wir (Umgangssprache)",
    "aw": "U2_42_WortFR.mp3",
-   "as": "U2_42_SatzFR.mp3"
+   "as": "U2_42_SatzFR.mp3",
+   "img": "U2_42.webp"
   },
   "U2_43": {
    "id": "U2_43",
@@ -1376,7 +1468,8 @@ window.DATEN = {
    "sde": "Mein Freund schläft im Gästezimmer.",
    "h": "",
    "aw": "U2_43_WortFR.mp3",
-   "as": "U2_43_SatzFR.mp3"
+   "as": "U2_43_SatzFR.mp3",
+   "img": "U2_43.webp"
   },
   "U2_44": {
    "id": "U2_44",
@@ -1388,7 +1481,8 @@ window.DATEN = {
    "sde": "Die Waschküche ist im Untergeschoss.",
    "h": "",
    "aw": "U2_44_WortFR.mp3",
-   "as": "U2_44_SatzFR.mp3"
+   "as": "U2_44_SatzFR.mp3",
+   "img": "U2_44.webp"
   },
   "U2_45": {
    "id": "U2_45",
@@ -1400,7 +1494,8 @@ window.DATEN = {
    "sde": "Tartine spielt im Estrich.",
    "h": "der Estrich = der Dachboden",
    "aw": "U2_45_WortFR.mp3",
-   "as": "U2_45_SatzFR.mp3"
+   "as": "U2_45_SatzFR.mp3",
+   "img": "U2_45.webp"
   },
   "U2_46": {
    "id": "U2_46",
@@ -1448,7 +1543,8 @@ window.DATEN = {
    "sde": "Auf welchem Stockwerk ist das Gästezimmer? Im zweiten Stock!",
    "h": "",
    "aw": "U2_49_WortFR.mp3",
-   "as": "U2_49_SatzFR.mp3"
+   "as": "U2_49_SatzFR.mp3",
+   "img": "U2_49.webp"
   },
   "U2_50": {
    "id": "U2_50",
@@ -1460,7 +1556,8 @@ window.DATEN = {
    "sde": "Die Katze ist hinter dem Vorhang!",
    "h": "",
    "aw": "U2_50_WortFR.mp3",
-   "as": "U2_50_SatzFR.mp3"
+   "as": "U2_50_SatzFR.mp3",
+   "img": "U2_50.webp"
   },
   "U2_51": {
    "id": "U2_51",
@@ -1472,7 +1569,8 @@ window.DATEN = {
    "sde": "Meine Bücher sind im Büchergestell.",
    "h": "auch: die Bibliothek",
    "aw": "U2_51_WortFR.mp3",
-   "as": "U2_51_SatzFR.mp3"
+   "as": "U2_51_SatzFR.mp3",
+   "img": "U2_51.webp"
   },
   "U2_52": {
    "id": "U2_52",
@@ -1484,7 +1582,8 @@ window.DATEN = {
    "sde": "Der Papierkorb steht neben dem Schreibtisch.",
    "h": "neu im Satz: à côté de = neben; le bureau = der Schreibtisch",
    "aw": "U2_52_WortFR.mp3",
-   "as": "U2_52_SatzFR.mp3"
+   "as": "U2_52_SatzFR.mp3",
+   "img": "U2_52.webp"
   }
  },
  "tartine": {

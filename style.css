@@ -157,9 +157,9 @@ img { -webkit-user-drag: none; }
 .zone-carte { flex: 1; display: grid; place-items: center; }
 .carte { width: min(660px, 100%); perspective: 1600px; cursor: pointer; outline: none; }
 .carte.entre { animation: entre .35s ease-out; }
-@keyframes entre { from { opacity: 0; transform: translateX(48px) rotate(2deg); } to { opacity: 1; transform: none; } }
+@keyframes entre { from { opacity: 0; transform: translateY(28px) scale(.97); } to { opacity: 1; transform: none; } }   /* not from the side: that made a phone page wider */
 .carte-int {
-  display: grid; transform-style: preserve-3d; -webkit-transform-style: preserve-3d;
+  display: grid; grid-template-columns: minmax(0, 1fr); transform-style: preserve-3d; -webkit-transform-style: preserve-3d;
   transition: transform .55s cubic-bezier(.2, .7, .2, 1);
 }
 .carte.tournee .carte-int { transform: rotateY(180deg); }
@@ -171,6 +171,7 @@ img { -webkit-user-drag: none; }
 }
 .verso { transform: rotateY(180deg); }
 .ligne-son { display: flex; align-items: center; justify-content: center; gap: 14px; }
+.ligne-son > p { min-width: 0; overflow-wrap: break-word; }                 /* a long word wraps, the card keeps the screen width */
 .mot-fr { margin: 0; font-size: clamp(30px, 4.6vw, 46px); font-weight: 800; color: var(--encre); line-height: 1.1; }
 .mot-fr.grand { font-size: clamp(36px, 6.4vw, 64px); }
 .mot-de { margin: 0; font-size: clamp(20px, 2.8vw, 28px); font-weight: 700; color: var(--brun); }
@@ -181,7 +182,10 @@ img { -webkit-user-drag: none; }
 .satz-de { margin: 0; font-size: clamp(15px, 2vw, 19px); color: var(--brun); line-height: 1.3; }
 .hinweis { margin: 6px 0 0; font-size: 14px; color: var(--brun-fonce); background: rgba(246, 196, 78, .28); padding: 5px 14px; border-radius: 99px; }
 .tippe { margin: 10px 0 0; font-size: 14px; font-weight: 700; color: var(--brun); opacity: .65; }
-.mot-img { width: 100%; max-height: 32vh; object-fit: cover; border-radius: 16px; }
+/* the whole picture (16:10, Docs/WebApp.md → Pictures), not cropped: as wide as the card allows, at most 32 % of the screen height
+   (51.2vh = 32vh × 1.6; a width with % keeps a long word's card from growing wider than the phone) */
+.mot-img { display: block; width: min(100%, 51.2vh); height: auto; aspect-ratio: 16 / 10; object-fit: cover; border-radius: 16px; }
+.verso .mot-img { width: min(100%, 35.2vh); }        /* the back has more text: the picture 22 % of the screen height, so the buttons stay on an iPad in landscape */
 .actions { display: flex; flex-wrap: wrap; justify-content: center; gap: 14px; visibility: hidden; opacity: 0; transition: opacity .2s; }
 .actions.visible { visibility: visible; opacity: 1; }
 .actions .btn { min-width: 170px; }
