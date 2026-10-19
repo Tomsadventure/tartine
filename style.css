@@ -94,6 +94,9 @@ img { -webkit-user-drag: none; }
 }
 .astuce p { margin: 0; flex: 1; color: var(--brun-fonce); font-weight: 600; }
 .astuce-x { width: 44px; height: 44px; flex: none; border-radius: 50%; font-size: 20px; color: var(--brun); }
+.astuce-place { display: contents; }                         /* empty = no gap on the home screen */
+.astuce-corps { flex: 1; display: flex; flex-direction: column; align-items: flex-start; gap: 10px; }
+.astuce-corps .btn { min-height: 52px; font-size: 18px; }
 
 /* ---------- Tartine's speech bubble (honey yellow = Tartine speaks) */
 .bulle {

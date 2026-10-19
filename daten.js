@@ -1,5 +1,5 @@
 window.DATEN = {
- "version": "2026-10-18 15:16",
+ "version": "2026-10-19 21:28",
  "unites": [
   {
    "id": "u1",

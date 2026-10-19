@@ -1,6 +1,6 @@
 /* Offline for « Les cartes de Tartine »: keeps every file of this version on the device (Docs/WebApp.md).
    bauen.py fills in the version and the file list – a new build is a new version, the old one is deleted. */
-const VERSION = 'tartine-bbfd6482fd';
+const VERSION = 'tartine-e7a32c0ba5';
 const FICHIERS = [
  "./",
  "app.js",
@@ -249,6 +249,7 @@ const FICHIERS = [
  "img/icon-180.png",
  "img/icon-192.png",
  "img/icon-512.png",
+ "img/icon-maskable-512.png",
  "img/mots/U1_01.webp",
  "img/mots/U1_02.webp",
  "img/mots/U1_03.webp",

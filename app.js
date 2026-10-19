@@ -218,14 +218,76 @@
       el('button', { class: 'lien', onclick: reglages }, 'Einstellungen')));
   }
 
-  function astuce() {                                        // how to put the app on the home screen (only in Safari)
-    const ios = /iPad|iPhone|iPod/.test(navigator.userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
-    const installe = navigator.standalone || window.matchMedia('(display-mode: standalone)').matches;
-    if (!ios || installe || etat.astuce) return null;
-    const a = el('div', { class: 'astuce' },
-      el('p', null, 'Tipp: Tippe oben auf « Teilen » und dann auf « Zum Home-Bildschirm ». Dann ist Tartine wie eine App da – auch ohne Internet.'),
-      el('button', { class: 'astuce-x', 'aria-label': 'Tipp schliessen', onclick: () => { etat.astuce = true; sauver(); a.remove(); } }, '✕'));
-    return a;
+  // ---------- as an app on the home screen, per device (2026-10-19, like the web app « Einmaleins » – Docs/WebApp.md):
+  // iPhone/iPad = a text tip (Teilen → Zum Home-Bildschirm). Android: when the browser reports « beforeinstallprompt » (Chrome,
+  // Samsung Internet – Chrome only after a tap and ~30 s on the page) a button « App installieren » that opens Android's own
+  // install dialog; before that, and in Firefox, the browser's menu path. PC and opened as an app: nothing.
+  const UA = navigator.userAgent;
+  const ios = /iPad|iPhone|iPod/.test(UA) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const android = /Android/i.test(UA);
+  const navigateur = /SamsungBrowser/i.test(UA) ? 'samsung' : /Firefox/i.test(UA) ? 'firefox' : 'chrome';
+  const commeApp = () => !!navigator.standalone ||
+    ['standalone', 'fullscreen', 'minimal-ui'].some(m => window.matchMedia('(display-mode: ' + m + ')').matches);
+  let invitation = null;                                    // Android's install event – it may ask only once
+  window.addEventListener('beforeinstallprompt', e => {
+    if (!android) return;                                   // PC: the browser shows its own icon in the address bar
+    e.preventDefault();                                     // our button instead of Chrome's small bar
+    invitation = e;
+    rafraichirAstuce();
+  });
+  window.addEventListener('appinstalled', () => { invitation = null; etat.installee = true; sauver(); rafraichirAstuce(); });
+  const ETAPES = {
+    ios: 'Tippe auf « Teilen » (das Quadrat mit dem Pfeil) und dann auf « Zum Home-Bildschirm ».',
+    chrome: 'Tippe oben rechts auf ⋮ und dann auf « App installieren » (oder « Zum Startbildschirm hinzufügen »).',
+    samsung: 'Tippe unten auf ≡, dann auf « Seite hinzufügen zu » und « Startbildschirm ».',
+    firefox: 'Tippe auf ⋮ und dann auf « Installieren » (oder « Zum Startbildschirm hinzufügen »).',
+  };
+  function installer() {
+    const ev = invitation;
+    if (!ev) return;
+    invitation = null;                                      // Android reports a new event later if the child says no
+    try {
+      ev.prompt();
+      ev.userChoice.then(c => { if (c && c.outcome === 'accepted') { etat.installee = true; sauver(); } rafraichirAstuce(); })
+        .catch(rafraichirAstuce);
+    } catch (e) { rafraichirAstuce(); }
+  }
+  function contenuAstuce(ou) {                              // ou = 'accueil' (closable) | 'reglages'
+    if (!(ios || android) || commeApp()) return null;
+    if (etat.installee && !invitation) {
+      return ou === 'reglages' ? el('p', { class: 'petit' }, 'Tartine ist schon installiert – öffne sie über das Symbol auf dem Startbildschirm.') : null;
+    }
+    if (ou === 'accueil' && etat.astuce) return null;
+    const x = ou === 'accueil' ? el('button', { class: 'astuce-x', 'aria-label': 'Tipp schliessen',
+      onclick: () => { etat.astuce = true; sauver(); rafraichirAstuce(); } }, '✕') : null;
+    if (android && invitation) {
+      return el('div', { class: 'astuce' },
+        el('div', { class: 'astuce-corps' },
+          el('p', null, 'Als App installieren: Dann liegt Tartine auf dem Startbildschirm – auch ohne Internet.'),
+          bouton('btn-confiture', 'App installieren', null, installer)),
+        x);
+    }
+    return el('div', { class: 'astuce' },
+      el('p', null, 'Tipp: ' + ETAPES[ios ? 'ios' : navigateur] + ' Dann ist Tartine wie eine App da – auch ohne Internet.'), x);
+  }
+  function astuce() {                                       // a place on the home screen that the tip can change later
+    const place = el('div', { class: 'astuce-place', 'data-ou': 'accueil' });
+    const c = contenuAstuce('accueil');
+    if (c) place.append(c);
+    return place;
+  }
+  function astuceReglages() {
+    if (!(ios || android) || commeApp()) return null;
+    const place = el('div', { class: 'astuce-place', 'data-ou': 'reglages' });
+    const c = contenuAstuce('reglages');
+    if (c) place.append(c);
+    return [el('p', null, ios ? 'Auf den Home-Bildschirm:' : 'Auf den Startbildschirm:'), place];
+  }
+  function rafraichirAstuce() {
+    document.querySelectorAll('.astuce-place').forEach(p => {
+      const c = contenuAstuce(p.dataset.ou);
+      p.replaceChildren(...(c ? [c] : []));
+    });
   }
 
   function reglages() {
@@ -239,13 +301,14 @@
       el('p', { class: 'petit' }, 'Deutsch zuerst: selbst überlegen, wie es auf Französisch heisst – dann umdrehen.'),
       bouton('btn-creme', 'Fortschritt löschen', 'alle Sterne und « Je sais ! »', () => {
         if (!window.confirm('Alle Sterne und « Je sais ! » löschen?')) return;
-        etat = Object.assign(VIDE(), { sens: etat.sens, astuce: etat.astuce });
+        etat = Object.assign(VIDE(), { sens: etat.sens, astuce: etat.astuce, installee: etat.installee });
         sauver();
         ecranAccueil();
       }),
       el('p', { class: 'petit' }, 'Stand ' + D.version + ' · ' + Object.keys(MOTS).length + ' Wörter'),
       bouton('btn-creme', 'Ton testen', 'Tartine sagt Hallo', () => Son.dire(aT(D.lignes.accueil))),
       el('p', { class: 'petit' }, 'Kein Ton? Lautstärke-Tasten drücken. Auf einem iPhone mit iOS älter als 17 zusätzlich den Stumm-Modus ausschalten.'),
+      astuceReglages(),
       el('p', { class: 'petit' }, 'Schrift: Nunito (SIL Open Font License, fonts/OFL.txt)'),
       bouton('btn-confiture', 'Fertig', null, () => voile.remove())));
     document.body.append(voile);

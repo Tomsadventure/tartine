@@ -9,6 +9,11 @@
   "theme_color": "#FCEFD6",
   "icons": [
     { "src": "img/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" }
+    { "src": "img/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "img/icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ],
+  "screenshots": [
+    { "src": "img/ecrans/start-handy.png", "sizes": "390x844", "type": "image/png", "form_factor": "narrow", "label": "Die Wörter beider Unités mit Tartine" },
+    { "src": "img/ecrans/karte-tablet.png", "sizes": "1180x820", "type": "image/png", "form_factor": "wide", "label": "Eine Karte mit Bild, Wort und Satz" }
   ]
 }
